@@ -24,8 +24,8 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  int _scoreX = 0;
-  int _scoreO = 0;
+  int _scoreX = 1;
+  int _scoreO = 1;
   bool _turnOfO = true;
   int _filledBoxes = 0;
   final List<String> _xOrOList = [
