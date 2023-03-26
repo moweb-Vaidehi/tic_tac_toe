@@ -17,7 +17,7 @@
     steps:
       - uses: actions/checkout@v2
 # Sets up the Flutter SDK
-      - uses: subosito/flutter-action@v1.6.1
+      - uses: subosito/flutter-action@v2
         with:
             channel: 'stable'
 # Gets the dependencies and builds the app
