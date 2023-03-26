@@ -1,0 +1,28 @@
+# The name of your workflow
+ name: CI
+
+# When should this workflow run?
+ on:
+  pull_request:
+   branches:
+    - master
+
+# Jobs to perform in this workflow
+ jobs:
+  flutter_test:
+# Name of the job
+    name: Run Flutter Test and analyze
+# Runs on an Ubuntu virtual machine
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+# Sets up the Flutter SDK
+      - uses: subosito/flutter-action@v1.6.1
+        with:
+            channel: 'stable'
+# Gets the dependencies and builds the app
+      - run: flutter pub get
+      - run: flutter analyze
+      - run: flutter test
+
+
